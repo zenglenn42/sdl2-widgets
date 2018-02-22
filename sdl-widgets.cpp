@@ -1122,7 +1122,7 @@ Dial::Dial(WinBase *pw,Style st,Rect rect,int maxval,
     rel_cmd(_rel_cmd),
     mid(rect.w-rect.h/2,rect.h/2),
     d_start(0),
-    loc((Point[]){ Point(-3,0), Point(3,0), Point(1,mid.y-2), Point(-1,mid.y-2) }), // pointer
+    loc{ Point(-3,0), Point(3,0), Point(1,mid.y-2), Point(-1,mid.y-2) }, // pointer
     ang(0) {
   title_str=tit;
   for (int i=0;i<pnt_max;++i) {
