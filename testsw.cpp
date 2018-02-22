@@ -111,7 +111,7 @@ namespace spin {
   
   void init() {
     start_but=new Button(bgwin,0,Rect(100,80,32,16),"stop",
-      [&](Button *but) {
+      [](Button *but) -> void {
         run=!run;
         but->label= !run ? "start" : "stop";
         if (run) SDL_CreateThread(thread_fun,"thread_fun", 0);
@@ -348,7 +348,7 @@ void otw_cmd(Button *but) {
 int th_fun(void *arg) {
   static int n=0; // output should be: 'th_fun: n=0' 'th_fun: n=1'
   while (n<2) {
-    send_uev([=](int) { printf("th_fun: n=%d\n",n); },0);
+    send_uev([](int) { printf("th_fun: n=%d\n",n); },0);
     ++n;
   }
   return 0;
