@@ -1,11 +1,11 @@
-CC := g++
-CFLAGS := -g $(shell sdl2-config --cflags) -std=c++11
-LFLAGS := $(shell sdl2-config --libs) -lSDL2_ttf
+CC = g++
+CFLAGS  := -g $(shell sdl2-config --cflags) -std=c++11
+LDFLAGS := $(shell sdl2-config --libs) -lSDL2_ttf
 
 .SUFFIXES=
 
 hello: hello.o ../sdl-widgets.a
-	$(CC) $^ -o $@ $(LFLAGS)
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 %.o: %.cpp
 	$(CC) -c $< -I.. $(CFLAGS)
