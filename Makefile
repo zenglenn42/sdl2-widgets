@@ -51,7 +51,7 @@ LDFLAGS := $(sdl2_LDFLAGS) $(LIBS) $(LDFLAGS_OPTS)
 .SUFFIXES=
 .PHONY: all hello make-waves bouncy-tune archive
 
-all: testsw hello make-waves bouncy-tune
+all: SDL_widgets.h archive testsw hello make-waves bouncy-tune
 
 %: %.o sdl-widgets.a 
 	$(CC) $< sdl-widgets.a -o $@ $(LDFLAGS)
