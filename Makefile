@@ -72,14 +72,12 @@ testsw.o: sdl-widgets.h shapes.h
 
 .PHONY: debugmake
 debugmake:
-	@$(ECHO) macos_FW      = $(macos_FW)
-	@$(ECHO) macos_LDFLAGS = $(macos_LDFLAGS)
-	@$(ECHO) LDFLAGS_OPTS  = $(LDFLAGS_OPTS)
 	@$(ECHO) SDL2_CONFIG   = $(SDL2_CONFIG)
 	@$(ECHO) sdl2_CFLAGS   = $(sdl2_CFLAGS)
 	@$(ECHO) opt_FLAGS     = $(opt_FLAGS)
 	@$(ECHO) CFLAGS        = $(CFLAGS)
 	@$(ECHO) LIBS          = $(LIBS)
+	@$(ECHO) LDFLAGS_OPTS  = $(LDFLAGS_OPTS)
 	@$(ECHO) LDFLAGS       = $(LDFLAGS)
 
 rm_FLAGS = -rf
